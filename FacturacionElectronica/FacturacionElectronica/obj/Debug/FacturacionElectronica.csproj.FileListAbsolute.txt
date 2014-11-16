@@ -1,0 +1,12 @@
+C:\Users\LuisAntonio\Desktop\Agosto Diciembre 2014\CursoFactEl\FacturacionElectronica\FacturacionElectronica\bin\FacturacionElectronica.dll
+C:\Users\LuisAntonio\Desktop\Agosto Diciembre 2014\CursoFactEl\FacturacionElectronica\FacturacionElectronica\bin\FacturacionElectronica.pdb
+C:\Users\LuisAntonio\Desktop\Agosto Diciembre 2014\CursoFactEl\FacturacionElectronica\FacturacionElectronica\bin\itextsharp.dll
+C:\Users\LuisAntonio\Desktop\Agosto Diciembre 2014\CursoFactEl\FacturacionElectronica\FacturacionElectronica\bin\ThoughtWorks.QRCode.dll
+C:\Users\LuisAntonio\Desktop\Agosto Diciembre 2014\CursoFactEl\FacturacionElectronica\FacturacionElectronica\obj\Debug\FacturacionElectronica.csprojResolveAssemblyReference.cache
+C:\Users\LuisAntonio\Desktop\Agosto Diciembre 2014\CursoFactEl\FacturacionElectronica\FacturacionElectronica\obj\Debug\FacturacionElectronica.dll
+C:\Users\LuisAntonio\Desktop\Agosto Diciembre 2014\CursoFactEl\FacturacionElectronica\FacturacionElectronica\obj\Debug\FacturacionElectronica.pdb
+C:\Users\Laura\Documents\7mo.Semestre\CursoFacturación\FacturacionElectronica\FacturacionElectronica\bin\FacturacionElectronica.dll
+C:\Users\Laura\Documents\7mo.Semestre\CursoFacturación\FacturacionElectronica\FacturacionElectronica\bin\FacturacionElectronica.pdb
+C:\Users\Laura\Documents\7mo.Semestre\CursoFacturación\FacturacionElectronica\FacturacionElectronica\obj\Debug\FacturacionElectronica.csprojResolveAssemblyReference.cache
+C:\Users\Laura\Documents\7mo.Semestre\CursoFacturación\FacturacionElectronica\FacturacionElectronica\obj\Debug\FacturacionElectronica.dll
+C:\Users\Laura\Documents\7mo.Semestre\CursoFacturación\FacturacionElectronica\FacturacionElectronica\obj\Debug\FacturacionElectronica.pdb
