@@ -45,7 +45,7 @@
               <td>RFC</td>
               <td><asp:TextBox ID="txtRFCEmisor" runat="server"></asp:TextBox></td>
               <td>Nombre</td>
-              <td><asp:TextBox ID="txtNombreEmisor" runat="server"></asp:TextBox></td>
+              <td><asp:TextBox ID="txtNombreEmisor" runat="server" text="Antonio"></asp:TextBox></td>
           </tr>
           <tr>
               <td colspan="6"><h1>Datos del Receptor</h1></td>
@@ -53,8 +53,7 @@
           <tr>
               <td>RFC</td>
               <td><asp:TextBox ID="txtRFCReceptor" runat="server"></asp:TextBox></td>
-              <td>Nombre</td>
-              <td><asp:TextBox ID="txtNombreReceptor" runat="server"></asp:TextBox></td>
+              
           </tr>
           <tr>
               <td colspan="6"><h1>Datos de la Factura</h1></td>

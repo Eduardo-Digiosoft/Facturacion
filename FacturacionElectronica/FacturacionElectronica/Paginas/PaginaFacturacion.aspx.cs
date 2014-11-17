@@ -33,9 +33,14 @@ namespace FacturacionElectronica.Paginas
         string carpetaFacturas = @"C:\Facturacion\Facturas\";
         string prefactura = "";
         string carpetaCertificados = @"C:\Facturacion\Certificados\";
-        string certificado = "AAA010101AAA_CER.cer";
-        string llave = "AAA010101AAA_KEY.key";
-        string pass = "12345678a";
+        //string certificado = "AAA010101AAA_CER.cer";
+        //string llave = "AAA010101AAA_KEY.key";
+        //string pass = "12345678a";
+        string certificado = "certificado.cer";
+        string llave = "llave.key";
+        string pass = "";
+        string factura = "";
+
 
         #region Conceptos y Total
 
@@ -313,10 +318,11 @@ namespace FacturacionElectronica.Paginas
         {
             if (GenerarXML())
             {
-                MessageBox.Show(this, "La prefactura fue generada correctamente.");
+                //MessageBox.Show(this, "La prefactura fue generada correctamente.");
 
                 if (Timbrar())
                 {
+                    MessageBox.Show(this, "La prefactura fue timbrada correctamente.");
                     GuardarBD();
 
                     if (GenerarPDF())
@@ -334,7 +340,8 @@ namespace FacturacionElectronica.Paginas
                 string xsi = "http://www.w3.org/2001/XMLSchema-instance";
                 string esquema = "http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd";
 
-                string fecha = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+                //string fecha = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+                string fecha = Funciones.ObtenerFechaHora();
                 prefactura = fecha.Replace("-", "").Replace("T", "_").Replace(":", "") + ".xml";
 
                 XmlDocument documento = new XmlDocument();
@@ -392,11 +399,11 @@ namespace FacturacionElectronica.Paginas
 
                 // Parte 3: Receptor
                 string rfcReceptor = txtRFCReceptor.Text;
-                string nombreReceptor = txtNombreReceptor.Text;
+                //string nombreReceptor = txtNombreReceptor.Text;
                 
                 XmlElement receptor = documento.CreateElement("cfdi", "Receptor", cfdi);
                 receptor.SetAttribute("rfc", rfcReceptor);
-                receptor.SetAttribute("nombre",txtNombreReceptor.Text);
+                //receptor.SetAttribute("nombre",txtNombreReceptor.Text);
 
                 comp.AppendChild(receptor);
 
@@ -543,6 +550,10 @@ namespace FacturacionElectronica.Paginas
         {
             try
             {
+                MemoryStream timbre = Funciones.Timbrar(
+                    Path.Combine(carpetaFacturas, prefactura));
+                factura = prefactura.Replace(".xml", "-timbrado.xml");
+                GuardarXML(factura, timbre);
                 return true;
             }
             catch (Exception ex)
